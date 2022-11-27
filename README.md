@@ -1,32 +1,36 @@
 # Website Monitoring
+*Pre-configured Grafana & Prometheus monitoring stack using the blackbox exporter for website status monitoring*
+
+
+## Running the monitoring stack
+
+Prerequisites: 
+
+- Docker and docker-compose
+
+```shell
+# Create and run the containers: 
+docker compose up -d
+
+# Stop and remove the containers: 
+docker compose down
+```
+
 
 ## Blackbox Exporter
 
-```
-http://localhost:9115
-```
+Access the blackbox exporter at: 
+> http://localhost:9115
+
 
 ## Prometheus
 
-```
-http://localhost:9090/targets
-```
-
+Access prometheus at:
+> http://localhost:9090/targets
+$
 
 ## Grafana
 
-````
-http://localhost:3000/login
-admin/pass
-```
+Access grafana at (admin/pass):
+> http://localhost:3000/login
 
-Set up a new data source with URL: http://prometheus:9090
-
-Grafana Blackbox Exporter Dashboard: https://grafana.com/grafana/dashboards/7587-prometheus-blackbox-exporter/
-Dashboard id: 7587
-
-
-
-## TODO
-
-- Set up alerts if website is down
